@@ -1,20 +1,61 @@
+---
+// import type { string } from "astro/zod"
+// import type Cards from "../pages/Cards.astro";
+
+const textlinks: { label: string; href: string }[] = [
+  { label: "Cards", href: "/Cards/" },
+  { label: "Navbars", href: "/Navbars/" },
+  { label: "Footers", href: "/Footers/" },
+];
+---
+
 <header>
-  <div class="flex gap-64 m-5  bg-">
-    <div>
-      <a href="#">Kit Components</a>
+  <div class="flex gap-64 p-2 justify-between bt-1">
+    <div class="nav__links nav__home">
+      <a href="/">Kit Components</a>
     </div>
-    <div>
+    <div class="nav__container">
       <nav>
         <ul class="flex gap-10">
-          <li><a href="#">Cards</a></li>
-          <li><a href="#">Navbars</a></li>
-          <li><a href="#">Footer</a></li>
+          <li class="nav__cards nav__links"><a href="Cards">Cards</a></li>
+          <li class="nav__navbars nav__links"><a href="Navbars">Navbars</a></li>
+          <li class="nav__footers nav__links"><a href="Footers">Footers</a></li>
         </ul>
       </nav>
     </div>
-    <div>
-      <img src="" alt="" />
-      <p>Byron Tito</p>
+    <div class="w-auto nav__links flex">
+      <img class="h-6 mr-3" src="../../public/assets/murcielago.png" alt="" />
+      <a href="http://">Byron Tito</a>
     </div>
   </div>
 </header>
+
+<style>
+  .nav__links {
+    padding: 5px 20px;
+  }
+  .nav__cards,
+  .nav__navbars,
+  .nav__footers {
+    border-radius: 7px;
+    transition:
+      background-color 500ms ease,
+      
+  }
+  .nav__cards:hover,
+  .nav__navbars:hover,
+  .nav__footers:hover {
+    background-color: #f2ecff;
+    /* border-radius: 10px; */
+  }
+ 
+  
+  .nav__home{
+    transition: border-bottom 300ms ease-in-out
+  }
+
+  .nav__home:hover {
+    border-bottom: 1px solid black;
+  }
+  
+</style>
