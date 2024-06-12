@@ -11,8 +11,8 @@ const happy = false
 const finished = true
 const goal = 3
 const skillColor = "navy";
----
 
+---
 <Layout title="Sobre Mi">
   <header>
     <div class="max-w-screen-xl mx-auto ">
@@ -30,11 +30,11 @@ const skillColor = "navy";
         el dicho peor es nada
       </p>
       <p>Este sitio esta echo con Astro, es un tecnologia nueva 😎</p>
-    <ul>
+    <!-- <ul>
         <li><a href="/posts/post-1/">Post 1</a></li>
         <li><a href="/posts/post-2/">Post 2</a></li>
         <li><a href="/posts/post-3/">Post 3</a></li>
-    </ul>
+    </ul> -->
     {happy && <p>¡Estoy feliz de aprender Astro!</p>}
     {finished && <p>¡He terminado este tutorial!</p>}
     {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
