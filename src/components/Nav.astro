@@ -1,18 +1,10 @@
 ---
-import type { string } from "astro/zod"
-import type Cards from "../pages/Cards.astro";
 
-const textlinks: { label: string; href: string }[] = [
-  { label: "Cards", href: "/Cards/" },
-  { label: "Navbars", href: "/Navbars/" },
-  { label: "Footers", href: "/Footers/" },
-  { label: "About", href: "/About/" },
-];
 ---
 
-<header>
-  <div class="flex gap-64 p-2 justify-between bt-1 ">
-    <div class="nav__links nav__home">
+<header class="navigation">
+  <div class="md:flex lg:gap-64 p-2 md:justify-between bt-1">
+    <div class="nav__links nav__home text-center">
       <a href="/">Kit Components</a>
     </div>
     <div class="nav__container">
@@ -24,14 +16,17 @@ const textlinks: { label: string; href: string }[] = [
         </ul>
       </nav>
     </div>
-    <div class="w-auto nav__links flex">
-      <img  class="h-6 mr-3" src="../../public/assets/murcielago.png" alt="" />
+    <div class="w-auto nav__links flex justify-center">
+      <img class="h-6 mr-3" src="../../public/assets/murcielago.png" alt="" />
       <a href="About">Byron Tito</a>
     </div>
   </div>
 </header>
 
 <style>
+  /* .navigation{
+    display: none
+  } */
   .nav__links {
     padding: 5px 20px;
   }
@@ -39,9 +34,7 @@ const textlinks: { label: string; href: string }[] = [
   .nav__navbars,
   .nav__footers {
     border-radius: 7px;
-    transition:
-      background-color 500ms ease,
-      
+    transition: background-color 500ms ease;
   }
   .nav__cards:hover,
   .nav__navbars:hover,
@@ -49,14 +42,29 @@ const textlinks: { label: string; href: string }[] = [
     background-color: #bcbbbd;
     /* border-radius: 10px; */
   }
- 
-  
-  .nav__home{
-    transition: border-bottom 300ms ease-in-out
+
+  .nav__home {
+    transition: border-bottom 300ms ease-in-out;
   }
 
   .nav__home:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
   }
-  
+
+  @media (max-width: 767px) {
+    .displayClick {
+      display: none;
+    }
+
+    .hamburger {
+      display: block; /* Show hamburger menu on mobile */
+    }
+  }
+
+  /* Styling for navigation links (applies to both desktop and mobile) */
+  .nav__links {
+    padding: 5px 20px;
+  }
 </style>
+
+

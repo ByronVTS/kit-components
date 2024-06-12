@@ -1,0 +1,12 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+<Layout title={frontmatter.pageName}>
+
+    <div class="max-w-screen-xl mx-auto">
+        <h1 class="text-4xl text-center">{frontmatter.title}</h1>
+    <p>Escrivido por {frontmatter.author}</p>
+<slot />
+</div>
+</Layout>

@@ -1,0 +1,23 @@
+---
+interface Props {
+  url: string;
+  title: string;
+}
+const { title, url } = Astro.props;
+---
+
+<div class="blog__card w-96 border rounded-lg bg-slate-100 h-16 m-4 flex justify-center items-center">
+  <li class=" ">
+    <a class="" href={url}>{title}</a>
+  </li>
+</div>
+
+
+<style>
+    .blog__card{
+        transition: 500ms ease-in-out
+    }
+    .blog__card:hover{
+        transform: scale(1.1)
+    }
+</style>

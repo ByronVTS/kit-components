@@ -1,4 +1,6 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
+pageName: Post-2
 title: Mi segunda publicación en el blog
 author: Alumno de Astro
 description: "Después de aprender un poco de Astro, ¡no podía parar!"
