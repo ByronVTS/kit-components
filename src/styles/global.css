@@ -32,3 +32,12 @@ body {
 .expanded {
   display: unset;
 }
+
+html.dark {
+  background-color: #161b22;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
