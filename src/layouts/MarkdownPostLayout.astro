@@ -1,7 +1,14 @@
 ---
 import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
+interface Frontmatter {
+  pageName: string;
+  title: string;
+  author: string;
+  tags: string[];
+}
 
+const fm = frontmatter as Frontmatter;
 ---
 <Layout title={frontmatter.pageName}>
 
@@ -9,15 +16,13 @@ const { frontmatter } = Astro.props;
         <h1 class="text-4xl text-center">{frontmatter.title}</h1>
     <p>Escrivido por {frontmatter.author}</p>
 
-    <div class="tags__container max-w-screen-xl mx-auto">
-        {
-          frontmatter.tags.map((tag ) => (
-            <p class="tag shadow-xl">
-              <a href={`/tags/${tag }`}>{tag}</a>
-            </p>
-          ))
-        }
-      </div>
+   <div class="tags__container max-w-screen-xl mx-auto">
+    {frontmatter.tags.map((tag:string) => (
+      <p class="tag shadow-xl">
+        <a href={`/tags/${tag as string}`}>{tag}</a>
+      </p>
+    ))}
+  </div>
 <slot />
 </div>
 </Layout>
