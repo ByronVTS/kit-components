@@ -1,11 +1,14 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-const allPosts = await Astro.glob("../posts/*.md");
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts");
+
 // recorremos todos los archivos de ese tipo
-const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
-<Layout title="Indice de etiquetas">
+<Layout title="Tags">
   <h2 class="text-3xl text-center mt-5">Lista de Tags</h2>
   <div class="tags__container max-w-screen-xl mx-auto">
     {
@@ -24,8 +27,6 @@ const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
     transition: 400ms ease-in-out;
   }
 
-  
-
   .tag {
     display: flex;
     flex-wrap: wrap;
@@ -37,13 +38,13 @@ const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
     font-size: 1.15em;
     transition: 400ms ease-in-out;
   }
-  .tag:hover{
+  .tag:hover {
     background-color: rgb(3, 45, 56);
   }
-  .tag:hover a{
+  .tag:hover a {
     color: white;
-    }
-  .tags__container{
+  }
+  .tags__container {
     margin-top: 40px;
     margin-bottom: 40px;
     display: grid;

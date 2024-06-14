@@ -5,12 +5,19 @@ interface Props {
 }
 
 const { title, url } = Astro.props;
-
 ---
 
-<div class="blog__card w-96 border rounded-lg bg-slate- h-16 m-4 flex justify-center items-center">
+<div
+  class="blog__card w-96 border rounded-lg bg-slate- h-16 m-4 flex justify-center items-center">
   <li class="">
-    {url && <a class="" href={url}>{title}</a>}
+    {
+      url && (
+        <a class="" href={`../posts/${url}`}>
+          {title}
+        </a>
+      )
+    }
+    <!-- {url} colocado de esa forma por que solo entrega el nombre del post que esta en .md -->
   </li>
 </div>
 

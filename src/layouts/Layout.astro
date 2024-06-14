@@ -6,7 +6,7 @@ interface Props {
 }
 import { ViewTransitions } from "astro:transitions";
 const { title } = Astro.props;
-import '../styles/global.css';
+import "../styles/global.css";
 import Hamburger from "../components/Hamburger.astro";
 ---
 
@@ -21,13 +21,13 @@ import Hamburger from "../components/Hamburger.astro";
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body >
-    <Hamburger/>
-    <Nav/>
-    <slot  />
-    <Footer/>
+  <body>
+    <Hamburger />
+    <Nav />
+    <slot />
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
   </body>
-  <script>
-    import "../scripts/menu.js";
-  </script>
 </html>

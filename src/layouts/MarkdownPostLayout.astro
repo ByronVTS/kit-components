@@ -1,63 +1,55 @@
 ---
 import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
-interface Frontmatter {
-  pageName: string;
-  title: string;
-  author: string;
-  tags: string[];
-}
-
-const fm = frontmatter as Frontmatter;
 ---
-<Layout title={frontmatter.pageName}>
 
-    <div class="max-w-screen-xl mx-auto">
-        <h1 class="text-4xl text-center">{frontmatter.title}</h1>
+<Layout title={frontmatter.pageName}>
+  <div class="max-w-screen-xl mx-auto">
+    <h1 class="text-4xl text-center">{frontmatter.title}</h1>
     <p>Escrivido por {frontmatter.author}</p>
 
-   <div class="tags__container max-w-screen-xl mx-auto">
-    {frontmatter.tags.map((tag:string) => (
-      <p class="tag shadow-xl">
-        <a href={`/tags/${tag as string}`}>{tag}</a>
-      </p>
-    ))}
+    <div class="tags__container max-w-screen-xl mx-auto">
+      {
+        frontmatter.tags.map((tag: string) => (
+          <p class="tag shadow-xl">
+            <a href={`/tags/${tag as string}`}>{tag}</a>
+          </p>
+        ))
+      }
+    </div>
+    <slot />
   </div>
-<slot />
-</div>
 </Layout>
 
 <style>
-    .tag a {
-      color: rgb(36, 19, 58);
-      transition: 400ms ease-in-out;
-    }
-  
-    
-  
-    .tag {
-      display: flex;
-      flex-wrap: wrap;
-      width: 300px;
-      margin: 0.25em;
-      border: solid 1px #a1a1a1;
-      border-radius: 0.5em;
-      padding: 0.5em 1em;
-      font-size: 1.15em;
-      transition: 400ms ease-in-out;
-    }
-    .tag:hover{
-      background-color: rgb(3, 45, 56);
-    }
-    .tag:hover a{
-      color: white;
-      }
-    .tags__container{
-      margin-top: 40px;
-      margin-bottom: 40px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      place-items: center;
-      row-gap: 60px;
-    }
-  </style>
+  .tag a {
+    color: rgb(36, 19, 58);
+    transition: 400ms ease-in-out;
+  }
+
+  .tag {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0.25em;
+    border: solid 1px #a1a1a1;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1.15em;
+    transition: 400ms ease-in-out;
+  }
+  .tag:hover {
+    background-color: rgb(3, 45, 56);
+  }
+  .tag:hover a {
+    color: white;
+  }
+  .tags__container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    row-gap: 60px;
+  }
+</style>

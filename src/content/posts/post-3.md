@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pageName: Post-3
 title: Mi tercera publicación en el blog
 author: Alumno de Astro

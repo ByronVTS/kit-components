@@ -11,18 +11,22 @@ const happy = false;
 const finished = true;
 const goal = 3;
 const skillColor = "navy";
-const allPosts = await Astro.glob('../pages/posts/*.md')
+const allPosts = await getCollection("posts");
 import BlogPost from "../components/BlogPost.astro";
-import Greeting from '../components/Greeting'
+import Greeting from "../components/Greeting";
+import { getCollection } from "astro:content";
 ---
 
 <Layout title="Sobre Mi">
   <header>
     <div class="max-w-screen-xl mx-auto">
       <h1 class="titulito text-center text-5xl lg:text-9xl m-10">Bienvenido</h1>
-      <Greeting  messages={["Hola", "Qué tal", "Hola a todos", "Inti"]} />    
-      <Greeting client:load messages={["Hola", "Qué tal", "Hola a todos", "Inti"]} />    
-        <div>Hola mi nombre es {identity.name}</div>
+      <Greeting messages={["Hola", "Qué tal", "Hola a todos", "Inti"]} />
+      <Greeting
+        client:load
+        messages={["Hola", "Qué tal", "Hola a todos", "Inti"]}
+      />
+      <div>Hola mi nombre es {identity.name}</div>
       <div>Soy de {identity.country} y soy {identity.occupation}</div>
       <div>
         Y tengo superpoderes como {identity.super[0]}, {identity.super[1]} y {
@@ -41,29 +45,39 @@ import Greeting from '../components/Greeting'
       <p>Este sitio esta echo con Astro, es un tecnologia nueva 😎</p>
       <div class="m-10">
         <ul>
-          {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
+          {
+            allPosts.map((post) => (
+              <BlogPost url={post.slug} title={post.data.title} />
+            ))
+          }
+        </ul>
+        {happy && <p>¡Estoy feliz de aprender Astro!</p>}
+        {finished && <p>¡He terminado este tutorial!</p>}
+        {
+          goal === 3 ? (
+            <p>Mi objetivo es terminar en 3 días.</p>
+          ) : (
+            <p>Mi objetivo no son 3 días.</p>
+          )
+        }
       </div>
-      {happy && <p>¡Estoy feliz de aprender Astro!</p>}
-      {finished && <p>¡He terminado este tutorial!</p>}
-      {
-        goal === 3 ? (
-          <p>Mi objetivo es terminar en 3 días.</p>
-        ) : (
-          <p>Mi objetivo no son 3 días.</p>
-        )
-      }
     </div>
   </header>
-</Layout>
 
-<style define:vars={{ skillColor }}>
-  .titulito {
-    background: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .skill {
-    color: var(--skillColor);
-    font-weight: bold;
-  }
-</style>
+  <style define:vars={{ skillColor }}>
+    .titulito {
+      background: linear-gradient(
+        225deg,
+        #ff3cac 0%,
+        #784ba0 50%,
+        #2b86c5 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .skill {
+      color: var(--skillColor);
+      font-weight: bold;
+    }
+  </style>
+</Layout>
