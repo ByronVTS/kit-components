@@ -1,71 +1,73 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const identity = {
-  name: "Byron",
-  country: "Ecuador",
-  occupation: "Student",
-  super: ["super velocidad", "volar", "vision de rayos x"],
-};
-const skills = ["HTML", "CSS", "Chevere", "Astro", "Tailwind"];
-const happy = false;
-const finished = true;
-const goal = 3;
-const skillColor = "navy";
-const allPosts = await getCollection("posts");
-import BlogPost from "../components/BlogPost.astro";
-import Greeting from "../components/Greeting";
-import { getCollection } from "astro:content";
 ---
 
-<Layout title="Sobre Mi">
-  <header>
-    <div class="max-w-screen-xl mx-auto">
-      <h1 class="titulito text-center text-5xl lg:text-9xl m-10">Bienvenido</h1>
-      <Greeting messages={["Hola", "Qué tal", "Hola a todos", "Inti"]} />
-      <Greeting
-        client:load
-        messages={["Hola", "Qué tal", "Hola a todos", "Inti"]}
-      />
-      <div>Hola mi nombre es {identity.name}</div>
-      <div>Soy de {identity.country} y soy {identity.occupation}</div>
-      <div>
-        Y tengo superpoderes como {identity.super[0]}, {identity.super[1]} y {
-          identity.super[2]
-        }
-      </div>
-      <hr />
-      <div class="m-5">Entre mis habilidades estan</div>
-      <ul>
-        {skills.map((skill) => <li class="skill">{skill}</li>)}
-      </ul>
-      <p>
-        Aqui veras varios de mis ideas algunas tal vez esten feas pero ya dice
-        el dicho peor es nada
-      </p>
-      <p>Este sitio esta echo con Astro, es un tecnologia nueva 😎</p>
+<Layout title="About">
+  <!-- ------------Titulo ABOUT -------------- -->
+  <div class="flex justify-center">
+    <div class="inline-block w-auto px-auto">
+      <h1 class="w-full text-7xl lg:text-9xl text-center">Bienvenido</h1>
+    </div>
+  </div>
+  <!-- ------------Titulo ABOUT -------------- FIN -->
+  <!-- ------------Info  -------------- -->
+  <div class="w-full grid lg:grid-cols-2 grid-cols-1">
+    <div class="border-2 rounded-3xl w-auto shadow-2xl h-auto lg:m-20 m-5">
       <div class="m-10">
-        <ul>
-          {
-            allPosts.map((post) => (
-              <BlogPost url={post.slug} title={post.data.title} />
-            ))
-          }
-        </ul>
-        {happy && <p>¡Estoy feliz de aprender Astro!</p>}
-        {finished && <p>¡He terminado este tutorial!</p>}
-        {
-          goal === 3 ? (
-            <p>Mi objetivo es terminar en 3 días.</p>
-          ) : (
-            <p>Mi objetivo no son 3 días.</p>
-          )
-        }
+        <h2 class="lg:text-5xl text-3xl mb-10">Hola <br /> Soy Byron</h2>
+        <p>Estudiante de Ingeniería en Computación</p>
+        <p class="text-gray-500">Universidad Central del Ecuador</p>
+        <p class="mt-6">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+          assumenda doloribus labore vero maxime cupiditate eligendi. Doloribus
+          totam nemo, ad dolorum nulla commodi aliquam rerum ipsa quod quasi!
+          Voluptatibus, pariatur!
+        </p>
       </div>
     </div>
-  </header>
+    <div class="lg:m-20 m-10">
+      <img src="../../public/assets/murcielago-footer.png" alt="" />
+    </div>
+  </div>
+  <!-- ------------Info  -------------- FIN -->
+  <!-- ------------Mansory  -------------- -->
+  <div class="mansory__container grid lg:grid-cols-3fr-5fr lg:mx-10 m-5">
+    <h2 class="text-5xl m-10 self-center text-center lg:text-left">Las tecnologías que uso</h2>
+    <div class="mansory grid lg:grid-cols-5 gap-2 ">
+      <div class="bg-red-400 lg:col-span-1 py-4  rounded-lg grid place-items-center ">
+        <p class="text-6xl">Html</p>
+      </div>
+      <div class="bg-green-400 lg:col-span-3 p-4 rounded-lg grid place-items-center">
+        <p class="text-6xl">Tailwind</p>
+      </div>
+      <div class="bg-gray-400 lg:col-start-5 lg:col-end-6 lg:row-start-1 lg:row-end-5  rounded-lg p-4 grid place-items-center">
+        <p class="text-6xl  ">Css</p>
+      </div>
+      <div class="bg-blue-400 lg:col-span-4 p-4 rounded-lg grid place-items-center">
+        <p class="text-6xl">Javascript</p>
+      </div>
+      <div class="bg-yellow-400 lg:row-start-4 lg:col-span-2 p-4 rounded-lg grid place-items-center">
+        <p class="text-6xl">React</p>
+      </div>
+      <div class="bg-orange-400 lg:row-start-4 lg:col-span-2 p-4 rounded-lg grid place-items-center">
+        <p class="text-6xl">Astro</p>
+      </div>
+    </div>
+  </div>
+  <!-- ------------Mansory  -------------- FIN -->
+</Layout>
 
-  <style define:vars={{ skillColor }}>
-    .titulito {
+<style>
+  h1 {
+    background: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h1:hover {
+    animation: colorChange 2s ease-in-out infinite;
+  }
+  @keyframes colorChange {
+    0% {
       background: linear-gradient(
         225deg,
         #ff3cac 0%,
@@ -75,9 +77,59 @@ import { getCollection } from "astro:content";
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .skill {
-      color: var(--skillColor);
-      font-weight: bold;
+    20% {
+      background: linear-gradient(
+        225deg,
+        #2b86c5 0%,
+        #ff3cac 50%,
+        #784ba0 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-  </style>
-</Layout>
+    40% {
+      background: linear-gradient(
+        225deg,
+        #784ba0 0%,
+        #2b86c5 50%,
+        #ff3cac 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    60% {
+      background: linear-gradient(
+        225deg,
+        #ff3cac 0%,
+        #784ba0 50%,
+        #2b86c5 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    80% {
+      background: linear-gradient(
+        225deg,
+        #2b86c5 0%,
+        #ff3cac 50%,
+        #784ba0 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    100% {
+      background: linear-gradient(
+        225deg,
+        #784ba0 0%,
+        #2b86c5 50%,
+        #ff3cac 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .vertical-text {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+</style>

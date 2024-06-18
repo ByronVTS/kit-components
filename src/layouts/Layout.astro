@@ -24,7 +24,9 @@ import Hamburger from "../components/Hamburger.astro";
   <body>
     <Hamburger />
     <Nav />
-    <slot />
+    <main class="lg:max-w-screen-xl mx-auto">
+      <slot />
+    </main>
     <Footer />
     <script>
       import "../scripts/menu.js";
