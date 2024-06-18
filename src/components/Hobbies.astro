@@ -1,0 +1,129 @@
+<div
+  class="container shadow-2xl w-5/6 mx-auto my-20 rounded-2xl overflow-hidden">
+  <div class="palette flex ">
+    <div
+      class="color bg-hc1 flex place-items-center text-white font-bold h-72 flex-1 hover:flex-3 duration-100">
+      <h3 class="mx-auto text-center">Videojuegos</h3>
+      <div class=" info__hobbies m-14 ">
+        <h4 class="text-3xl text-black text-center my-5">Videjuegos</h4>
+        <ul>
+            <li>Resident Evil</li>
+            <li>Outlast</li>
+            <li>Need For Speed - Most Wanted</li>
+            <li>Transformers</li>
+            <li>Sniper</li>
+            <li>Carlos Duty</li>
+        </ul>
+        
+        </span>
+      </div>
+    </div>
+    <div
+      class="color bg-hc2 flex place-items-center text-white font-bold h-72 flex-1 hover:flex-3 duration-100">
+      <h3 class="mx-auto text-center">Películas</h3>
+      <div class=" info__hobbies m-14 ">
+        <h4 class="text-3xl text-black text-center my-5">Películas</h4>
+        <ul>
+            <li>Joker</li>
+            <li>Hachiko</li>
+            <li>Hang Hover</li>
+            <li>La lista de Sechler</li>
+            <li>El Francotirador</li>
+            <li>The Batman</li>
+        </ul>
+        
+        </span>
+      </div>
+    </div>
+    <div
+      class="color bg-hc3 flex place-items-center text-white font-bold h-72 flex-1 hover:flex-3 duration-100">
+      <h3 class="mx-auto text-center">Dibujar</h3>
+      <div class=" info__hobbies m-14 ">
+        <h4 class="text-3xl text-black text-center my-5">Dibujar</h4>
+        <ul>
+            <li>Barroco</li>
+            <li>Clasico</li>
+            <li>Manchas</li>
+        </ul>
+        
+        </span>
+      </div>
+    </div>
+    <div
+      class="color bg-hc4 flex place-items-center text-white font-bold h-72 flex-1 hover:flex-3 duration-100">
+      <h3 class="mx-auto text-center">Deportes</h3>
+      <div class=" info__hobbies m-14 ">
+        <h4 class="text-3xl text-black text-center my-5">Deportes</h4>
+        <ul>
+            <li>Padel</li>
+            <li>Boli</li>
+            <li>La Macarena</li>
+            <li>Tenis</li>
+            <li>Paitball</li>
+        </ul>
+        
+        </span>
+      </div>
+    </div>
+    <div
+      class="color bg-hc5 flex place-items-center text-white font-bold h-72 flex-1 hover:flex-3 duration-100">
+      <h3 class="mx-auto text-center">Libros</h3>
+      <div class=" info__hobbies m-14 ">
+        <h4 class="text-3xl text-black text-center my-5">Libros</h4>
+        <ul>
+            <li>Las 48 leyes del poder</li>
+            <li>El gato perdido</li>
+            <li>Manipulacion Oscura</li>
+            <li>Viaje al centro de la tierra</li>
+        </ul>
+        
+        </span>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    id="stats"
+    class="h-auto w-full bg-white flex items-center justify-between px-3">
+    <span class="text-3xl m-2 text-gray-400">Hobbies</span>
+    <svg
+      class="fill-gray-400"
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 18 18">
+      <path
+        d="M4 7.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5S5.5 9.83 5.5 9 4.83 7.5 4 7.5zm10 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm-5 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5S9.83 7.5 9 7.5z"
+      ></path>
+    </svg>
+  </div>
+</div>
+<style>
+     .color {
+      position: relative;
+      overflow: hidden;
+      transition: flex 100ms ease-in-out;
+    }
+ 
+  .color:hover h3 {
+    display: none;
+  }
+  .info__hobbies{
+    opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      transition: opacity 0s ease-out;
+}
+  .color:hover .info__hobbies{
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+  }
+</style>

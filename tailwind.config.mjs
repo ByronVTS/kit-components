@@ -6,6 +6,20 @@ export default {
       gridTemplateColumns: {
         "3fr-5fr": "3fr 5fr",
       },
+      flex: {
+        '2': '2 2 0%',
+        '3': '3 3 0%',
+      },
+     transitionDuration: {
+        '100': '100ms',
+      },
+      colors:{
+        'hc1': '#264653',
+        'hc2': '#2a9d8f',
+        'hc3': '#e9c46a',
+        'hc4': '#f4a261',
+        'hc5': '#e76f51'
+      }
     },
   },
   plugins: [],
