@@ -7,13 +7,13 @@ const allHobbies = await getCollection('hobbies');
   <div class="palette flex">
     {
       allHobbies.map((hobby, index) => (
-        <div key={index} class={`color bg-hc${index + 1} flex place-items-center text-white font-bold h-80 flex-1 hover:flex-3 duration-100`}>
-          <h3 class="mx-auto text-center">{hobby.data.title}</h3>
+        <div  class={`color bg-hc${index + 1} flex place-items-center text-white font-bold h-80 flex-1 hover:flex-3 duration-100`}>
+          <h3 class="mx-auto text-center">{hobby.data.title} </h3>
           <div class="info__hobbies left-0 top-0 right-0 bottom-0 m-14 z-10 absolute opacity-0">
-            <h4 class="text-3xl text-black text-center my-5">{hobby.data.title}</h4>
+            <h4 class="text-3xl text-black text-center my-5">{hobby.data.title} </h4>
             <ul>
-              {hobby.data.hobbies.map((singleHobby, subIndex) => (
-                <li key={subIndex}>{singleHobby}</li>
+              {hobby.data.hobbies.map((singleHobby) => (
+                <li>{singleHobby}</li>
               ))}
             </ul>
           </div>
@@ -35,6 +35,12 @@ const allHobbies = await getCollection('hobbies');
     transition: flex 100ms ease-in-out;
   }
 
+  bg-hc1{}
+  bg-hc2{}
+  bg-hc3{}
+  bg-hc4{}
+  bg-hc5{}
+ 
   .color:hover h3 {
     display: none;
   }
