@@ -2,7 +2,7 @@
 // import ThemeIcon from "../components/ThemIcon.astro";
 ---
 
-<header class="navigation">
+<header class="navigation fixed backdrop-blur-2xl top-0 mb-10 z-50 w-full">
   <div class="md:flex lg:gap-64 p-2 md:justify-between bt-1">
     <div class="nav__links nav__home text-center">
       <a href="/">Kit Components</a>
@@ -17,13 +17,13 @@
           <li class="nav__footers nav__links">
             <a href="/Footers">Footers</a>
           </li>
-          <li class="nav__tags nav__links"><a href="/tags">Tags</a></li>
+          <li class="nav__tags nav__links"><a href="/tags">Tags()</a></li>
         </ul>
       </nav>
     </div>
-    <div class="w-auto nav__links flex justify-center">
+    <div class=" w-auto nav__links flex justify-center">
       <!-- <ThemeIcon /> -->
-      <img class="h-6 mr-3" src="../../public/assets/murcielago.png" alt="" />
+       <div class="bg-logo bg-cover  bg-no-repeat bg-center w-10 mr-5 h-6"></div>
       <a href="/About">Byron Tito</a>
     </div>
   </div>
@@ -70,4 +70,7 @@
   .nav__links {
     padding: 5px 20px;
   }
+  /* .logo_nav {
+    background-image: url(../assets/img/murcielago.png);
+  } */
 </style>

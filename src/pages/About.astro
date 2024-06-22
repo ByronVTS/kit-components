@@ -4,14 +4,14 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About">
-  <!-- ------------Titulo ABOUT -------------- -->
-  <div class="flex justify-center">
+  <!--! ------------Titulo ABOUT -------------- -->
+  <div class="flex justify-center ">
     <div class="inline-block w-auto px-auto">
       <h1 class="w-full text-7xl lg:text-9xl text-center">Bienvenido</h1>
     </div>
   </div>
-<!--! ------------Titulo ABOUT -------------- FIN -->
-  <!-- ------------Info  -------------- -->
+<!-- ------------Titulo ABOUT -------------- FIN -->
+  <!--! ------------Info  -------------- -->
   <div class="w-full grid lg:grid-cols-2 grid-cols-1">
     <div class="border-2 rounded-3xl w-auto shadow-2xl h-auto lg:m-20 m-5">
       <div class="m-10">
@@ -26,12 +26,12 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
     </div>
-    <div class="lg:m-20 m-10">
-      <img src="../../public/assets/murcielago-footer.png" alt="" />
+    <div class="h-96 lg:h-full lg:p-20 m-5">
+      <div class="bg-footer bg-contain bg-no-repeat bg-center h-full "></div>
     </div>
   </div>
-  <!--! ------------Info  -------------- FIN -->
-  <!-- ------------Mansory  -------------- -->
+  <!-- ------------Info  -------------- FIN -->
+  <!--! ------------Mansory  -------------- -->
   <div class="mansory__container grid lg:grid-cols-3fr-5fr lg:mx-10 m-5">
     <h2 class="text-5xl m-10 self-center text-center lg:text-left">Las tecnologías que uso</h2>
     <div class="mansory grid lg:grid-cols-5 gap-2 ">
@@ -55,8 +55,8 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </div>
-  <!--! ------------Mansory  -------------- FIN -->
-  <!-- -------------Hobbies----------------- -->
+  <!-- ------------Mansory  -------------- FIN -->
+  <!--! -------------Hobbies----------------- -->
    <Hobbies/>
   <!--! -------------Hobbies-----------------FIN -->
 </Layout>
@@ -135,5 +135,12 @@ import Layout from "../layouts/Layout.astro";
   .vertical-text {
       writing-mode: vertical-rl;
       text-orientation: mixed;
+    }
+    .footer__img{
+      background-image: url(../assets/img/murcielago-footer.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      /* background-image: url(../assets/img/fondo.jpeg); */
     }
 </style>
