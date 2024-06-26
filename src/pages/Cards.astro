@@ -1,11 +1,17 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
+import Mixblend from "../components/Cards/mixblend.astro";
 ---
 
 <Layout title="Cards">
-    <div class="flex justify-center ">
-        <div class="inline-block w-auto px-auto">
-          <h1 class="w-full text-7xl lg:text-6xl text-center">Seccion de cards</h1>
-        </div>
-      </div>
+  <div class="flex justify-center">
+    <div class="inline-block w-auto px-auto">
+      <h1 class="w-full text-7xl lg:text-6xl text-center">Seccion de cards</h1>
+    </div>
+  </div>
+  <div class="flex">
+
+    <Mixblend/>
+    
+  </div>
 </Layout>

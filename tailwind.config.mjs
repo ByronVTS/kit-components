@@ -21,7 +21,7 @@ export default {
         hc5: "#e76f51",
       },
       backgroundImage: {
-        'footer': "url('./src/assets/img/murcielago-footer.png')",
+        'footer': "url('https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
         'logo': "url('./src/assets/img/murcielago.png')",
         'fondo': "url('https://images.pexels.com/photos/33545/sunrise-phu-quoc-island-ocean.jpg')",
       }
