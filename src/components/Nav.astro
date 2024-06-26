@@ -70,7 +70,9 @@
   .nav__links {
     padding: 5px 20px;
   }
-  /* .logo_nav {
-    background-image: url(../assets/img/murcielago.png);
-  } */
+  @-moz-document url-prefix() {
+  .navigation {
+    background-color: white !important; /* Asegúrate de que el fondo sea blanco en Firefox */
+  }
+}
 </style>
