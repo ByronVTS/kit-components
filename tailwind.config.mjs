@@ -23,7 +23,7 @@ export default {
       backgroundImage: {
         'footer': "url('./src/assets/img/murcielago-footer.png')",
         'logo': "url('./src/assets/img/murcielago.png')",
-        'fondo': "url('./src/assets/img/fondo.jpeg')",
+        'fondo': "url('https://images.pexels.com/photos/33545/sunrise-phu-quoc-island-ocean.jpg')",
       }
     },
   },
