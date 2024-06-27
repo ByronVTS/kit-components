@@ -1,5 +1,5 @@
 <div class="blur__container bg-fondo bg-center bg-cover h-40 border rounded-3xl flex items-center text-white text-xl">
-    <div class="flex justify-between w-full m-10 p-5 border rounded-xl backdrop-blur-xl  ">
+    <div class="blur__navbar flex justify-between w-full m-10 p-5 border rounded-xl backdrop-blur-xl  ">
         <div class="logo">🎃</div>
         <div class="menu">
             <ul class="flex gap-10 ">
@@ -15,5 +15,10 @@
 </div>
 
 <style>
-    
-</style>
+    @-moz-document url-prefix() {
+      .blur__navbar {
+          background-color: rgba(255, 255, 255, 0.719) !important; /* Asegúrate de que el fondo sea blanco en Firefox */
+        color: black
+      }
+    }
+  </style>
