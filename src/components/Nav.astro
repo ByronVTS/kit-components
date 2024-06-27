@@ -2,59 +2,41 @@
 // import ThemeIcon from "../components/ThemIcon.astro";
 ---
 
-<header class="navigation  fixed backdrop-blur-2xl top-0 mb-10 z-50 w-full ">
+<header class="navigation fixed backdrop-blur-2xl top-0 mb-10 z-50 w-full">
   <div class="md:flex lg:gap-64 p-2 md:justify-between bt-1">
     <div class="nav__links nav__home text-center">
-      <a href="/">Kit Components</a>
+      <a class="hover:border-b-2 ease-in" href="/">Kit Components</a>
     </div>
     <div class="nav__container">
       <nav>
-        <ul class="flex lg:gap-5 ">
-          <li class="nav__cards nav__links"><a href="/Cards">Cards</a></li>
-          <li class="nav__navbars nav__links">
+        <ul class="flex lg:gap-5">
+          <li
+            class="nav__cards py-1 px-2 nav__links hover:bg-gray-300 rounded-lg duration-500">
+            <a href="/Cards">Cards</a>
+          </li>
+          <li
+            class="nav__navbars py-1 px-2 nav__links hover:bg-gray-300 rounded-lg duration-500">
             <a href="/Navbars">Navbars</a>
           </li>
-          <li class="nav__footers nav__links">
+          <li
+            class="nav__footers py-1 px-2 nav__links hover:bg-gray-300 rounded-lg duration-500">
             <a href="/Footers">Footers</a>
           </li>
-          <li class="nav__tags nav__links"><a href="/tags">Tags()</a></li>
+          <li
+            class="nav__tags py-1 px-2 nav__links hover:bg-gray-300 rounded-lg duration-500">
+            <a href="/tags">Tags()</a>
+          </li>
         </ul>
       </nav>
     </div>
-    <div class=" w-auto nav__links flex justify-center">
+    <div class="w-auto nav__links flex justify-center">
       <!-- <ThemeIcon /> -->
-      <a href="/About">Byron Tito</a>
+      <a class="hover:border-b-2" href="/About">Byron Tito</a>
     </div>
   </div>
 </header>
 
 <style>
-  .nav__links {
-    padding: 5px 20px;
-  }
-  .nav__cards,
-  .nav__navbars,
-  .nav__footers,
-  .nav__tags {
-    border-radius: 7px;
-    transition: background-color 500ms ease;
-  }
-  .nav__cards:hover,
-  .nav__navbars:hover,
-  .nav__tags:hover,
-  .nav__footers:hover {
-    background-color: #bcbbbd;
-    /* border-radius: 10px; */
-  }
-
-  .nav__home {
-    transition: border-bottom 300ms ease-in-out;
-  }
-
-  .nav__home:hover {
-    border-bottom: 2px solid black;
-  }
-
   @media (max-width: 767px) {
     .displayClick {
       display: none;
@@ -65,13 +47,9 @@
     }
   }
 
-  /* Styling for navigation links (applies to both desktop and mobile) */
-  .nav__links {
-    padding: 5px 20px;
-  }
   @-moz-document url-prefix() {
-  .navigation {
-    background-color: white !important; /* Asegúrate de que el fondo sea blanco en Firefox */
+    .navigation {
+      background-color: white !important; /* Asegúrate de que el fondo sea blanco en Firefox */
+    }
   }
-}
 </style>
