@@ -2,9 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import CardsInsCards from "../components/CardsInCards.astro";
+import NavbarsInNavbars from "../components/navbarsInNavbars.astro";
 ---
 
 <Layout title="Kit Components" transition:animate="fade">
   <Hero />
-  <CardsInsCards />
+  <div class="grid grid-cols-2">
+    <CardsInsCards  />
+    <NavbarsInNavbars />
+  </div>
+  
 </Layout>

@@ -1,0 +1,69 @@
+<div class="cards__container  m-10">
+    <div class="cards__rotate relative  h-64 ">
+      <div
+        class="card card-1 absolute z-40 mt-24 w-full h-14 border border-black rounded-xl bg-red-400 ">    
+            <ul class="flex place-content-evenly items-center h-full">
+                <li>😎</li>
+                <li>Inicio</li>
+                <li>Contacto</li>
+                <li>Precios</li>
+                <li>Sobre Nosotros</li>
+            </ul>
+        
+      </div>
+      <div
+        class="card card-2 absolute z-30 mt-28 w-full h-14 border border-black rounded-xl bg-green-400 ">
+        <ul class="flex place-content-evenly items-center h-full">
+            <li>😍</li>
+            <li>Inicio</li>
+            <li>Contacto</li>
+            <li>Precios</li>
+            <li>Sobre Nosotros</li>
+        </ul>
+      </div>
+      <div
+        class="card card-3 absolute z-20 mt-20 w-full h-14 border border-black rounded-xl bg-blue-400 ">
+        <ul class="flex place-content-evenly items-center h-full">
+            <li>😂</li>
+            <li>Inicio</li>
+            <li>Contacto</li>
+            <li>Precios</li>
+            <li>Sobre Nosotros</li>
+        </ul>
+      </div>
+      <div
+        class="card card-4 absolute z-10 mt-24 w-full h-14 border border-black rounded-xl bg-violet-400 ">
+        <ul class="flex place-content-evenly items-center h-full">
+            <li>😜</li>
+            <li>Inicio</li>
+            <li>Contacto</li>
+            <li>Precios</li>
+            <li>Sobre Nosotros</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .card {
+      transition: transform 300ms ease-in-out;
+      transform-origin: bottom left;
+    }
+  
+    .cards__rotate:hover .card-4 {
+      transform: translateY(-90px);
+    }
+  
+    .cards__rotate:hover .card-3 {
+        transform: translateY(-10px);
+    }
+  
+    .cards__rotate:hover .card-2 {
+        transform: translateY(20px);
+    }
+    .cards__rotate:hover .card-1 {
+        transform: translateY(100px);
+        /* margin-top: 0; */
+    }
+  </style>
+  
