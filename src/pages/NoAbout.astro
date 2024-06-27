@@ -18,7 +18,6 @@ import { getCollection } from "astro:content";
 ---
 
 <Layout title="Sobre Mi">
-  <header>
     <div >
       <h1 class="titulito text-center text-5xl lg:text-9xl m-10">Bienvenido</h1>
       <Greeting messages={["Hola", "Qué tal", "Hola a todos", "Inti"]} />
@@ -62,7 +61,6 @@ import { getCollection } from "astro:content";
         }
       </div>
     </div>
-  </header>
 
   <style define:vars={{ skillColor }}>
     .titulito {
