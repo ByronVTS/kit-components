@@ -1,0 +1,75 @@
+<div class="box  w-10/12 h-full m-auto">
+  <div class="content w-full h-full m-2">
+   <div class="border border-white w-ful h-full m-10 rounded-3xl bg-gray-950">
+    <div class="border-b-2  flex gap-3 p-3">
+      <div class="flex ml-8 gap-3 justify-center items-center">
+        <div class="span-1 h-4 w-4 bg-yellow-500 rounded-full"></div>
+        <div class="span-2 h-4 w-4 bg-green-500 rounded-full"></div>
+        <div class="span-3 h-4 w-4 bg-red-500 rounded-full"></div>
+      </div>
+      <div>
+        <p class="text-xl">Terminal</p>
+      </div>
+    </div>
+    <div class="m-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iure officia saepe. Quod, error quisquam? Neque modi soluta ratione obcaecati minus sunt aspernatur porro nihil ex dolores nam, debitis tempore! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos, illo, corrupti sit aliquid sunt aliquam explicabo hic maiores quisquam vel nemo eligendi nulla illum tempore. Facilis dolor iste odio.</div>
+   </div>
+    
+  </div>
+</div>
+
+<style>
+  .box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1;
+  }
+  .box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transition: 0.5s;
+    filter: blur(30px);
+  }
+
+  .box:hover:before,
+  .box:hover:after {
+    filter: blur(0px);
+  }
+
+  .box:before,
+  .box:after {
+    background: linear-gradient(315deg, #ffbc00, #ff0058);
+  }
+
+  .box .content {
+    position: relative;
+ 
+    background: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    z-index: 1;
+    transform: 0.5s;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box .content h2 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .span-1{
+    
+  }
+
+</style>
