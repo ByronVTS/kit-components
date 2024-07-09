@@ -1,15 +1,14 @@
 ---
 // import ThemeIcon from "../components/ThemIcon.astro";
 ---
-
 <header class="navigation fixed backdrop-blur-2xl top-0 mb-10 z-50 w-full">
   <div class="md:flex lg:gap-64 p-2 md:justify-between bt-1">
-    <div class="nav__links nav__home text-center ml-10">
+    <div class="nav__links nav__home text-center lg:ml-10">
       <a class="hover:border-b-2 ease-in" href="/">Kit Components</a>
     </div>
     <div class="nav__container">
-      <nav>
-        <ul class="flex lg:gap-5">
+      <nav class="">
+        <ul class="flex lg:gap-5 justify-between">
           <li
             class="nav__cards py-1 px-2 nav__links hover:bg-gray-300 rounded-lg duration-500">
             <a href="/Cards">Cards</a>
@@ -29,7 +28,7 @@
         </ul>
       </nav>
     </div>
-    <div class="nav__links  text-center mr-10">
+    <div class="nav__links  text-center lg:mr-10">
       <a class="hover:border-b-2 ease-in" href="/About">Byron Tito</a>
     </div>
   </div>
