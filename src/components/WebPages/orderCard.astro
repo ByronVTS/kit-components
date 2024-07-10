@@ -1,0 +1,28 @@
+<div class="space-y-4 w-11/12 mx-auto rounded-xl overflow-hidden">
+  <details class="group border-s-8 border-green-500 bg-gray-200 duration-100 p-6 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex cursor-pointer items-center justify-between gap-1.5 duration-100">
+          <h2 class="text-lg font-medium  ">
+             001428 Byron Vladimir Tito Sandoval
+          </h2>
+      </summary>
+      <div class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out group-open:max-h-96">
+          <p class="mt-4 leading-relaxed text-gray-700">
+              Foco rojo
+          </p>
+          <p>TKS - 3648</p>
+          <p>Fecha solicitud: 2024/10/7 - 10:27 am</p>
+          <p>Fecha finalizada: 2024/10/7 - 16:43 am</p>
+          <p>orden de prioridad a primera hora</p>
+          <p>Orden en finalizada</p>
+      </div>
+  </details>
+</div>
+
+<style>
+details > div {
+  transition: max-height 0.5s ease-in-out;
+}
+details[open] > div {
+  max-height: 1000px; /* Ajusta este valor según la cantidad de contenido */
+}
+</style>
