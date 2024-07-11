@@ -1,29 +1,39 @@
-<div class="orderCard space-y-4 w-11/12 mx-auto rounded-2xl my-4  shadow-lg ">
-  <details class="group border-s-8 border-red-500 rounded-2xl   duration-100 pl-2 py-4 [&_summary::-webkit-details-marker]:hidden">
-      <summary class="flex cursor-pointer items-center justify-between gap-1.5 duration-100">
-          <h2 class=" font-medium text-xl  ">
-             001428 Byron Vladimir Tito Sandoval
-          </h2>
-      </summary>
-      <div class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out group-open:max-h-96">
-          <p class="">
-              Foco rojo
-          </p>
-          <p>TKS - 3648</p>
-          <p>Fecha solicitud: 2024/10/7 - 10:27 am</p>
-          <p>Fecha finalizada: 2024/10/7 - 16:43 am</p>
-          <p>orden de prioridad a primera hora</p>
-          <p>Orden en finalizada</p>
-      </div>
+<div class="orderCard space-y-4 w-97 mx-auto rounded-2xl my-4 shadow-lg">
+  <details
+    class="group border-s-8 border-red-500 rounded-2xl duration-1000 pl-2 py-4 [&_summary::-webkit-details-marker]:hidden"
+  >
+    <summary class="flex flex-col cursor-pointer duration-100">
+      <h2 class="font-medium text-xl">001428 Byron Vladimir Tito Sandoval</h2>
+      <p class="left-0 text-gray-700 text-base">Foco rojo</p>
+    </summary>
+    <div
+      class="overflow-hidden mt-4 flex flex-col max-h-0 transition-all duration-500 ease-in-out group-open:max-h-96"
+    >
+      <p>TKS - 3648</p>
+      <label for="datatime" class="font-bold">Creado</label>
+      <p>11/07/2024 17:23</p>
+      <label for="datatime" class="font-bold">Finalizada</label>
+      <input type="datetime-local" id="datetime" name="datetime" />
+      <label for="options" class="font-bold">Estado</label>
+      <select name="opciones" id="opciones">
+        <option value="creado">Creado</option>
+        <option value="entregado">Entregado</option>
+        <option value="enproceso">En proceso</option>
+        <option value="pausada">Pausada</option>
+        <option value="reagendada">Reagendada</option>
+        <option value="cancelada">Cancelada</option>
+      </select>
+      <p class="font-bold">Informacion adicional</p>
+      <p>Cliente dice que no va a estar en su domicilio pero que afuera de su casa hay varios cables rotos despues que paso un camion</p>
+    </div>
   </details>
 </div>
 
 <style>
-details > div {
-  transition: max-height 0.5s ease-in-out;
-}
-details[open] > div {
-  max-height: 1000px; 
-}
-
+  details > div {
+    transition: max-height 0.5s ease-in-out;
+  }
+  details[open] > div {
+    max-height: 1000px;
+  }
 </style>
