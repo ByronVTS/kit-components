@@ -19,6 +19,7 @@ export default {
         hc3: "#e9c46a",
         hc4: "#f4a261",
         hc5: "#e76f51",
+        dark: "#0D1117"
       },
       backgroundImage: {
         'footer': "url('https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
