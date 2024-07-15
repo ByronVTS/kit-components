@@ -1,24 +1,54 @@
 ---
-interface Props{
+interface Props {
   title: string;
   numberTicket: number;
-  additionalInformation?:string;
+  additionalInformation?: string;
 }
-const {title, numberTicket, additionalInformation='No hay novedades'} = Astro.props
+const {
+  title,
+  numberTicket,
+  additionalInformation = "No hay novedades",
+} = Astro.props;
 ---
-<div id="orderCard" class="orderCard space-y-4 w-97 mx-auto rounded-2xl my-4  border z-50 dark:shadow-gray-600">
-  <details class="group border-s-8 border-red-500 rounded-2xl duration-1000 pl-2 py-4 [&_summary::-webkit-details-marker]:hidden">
+
+<div
+  id="orderCard"
+  class="orderCard space-y-4 w-97 dark:bg-black mx-auto rounded-2xl my-4 z-50"
+>
+  <details
+    class="group border-s-8 border-red-500 rounded-2xl duration-1000 pl-2 py-4 [&_summary::-webkit-details-marker]:hidden"
+  >
     <summary class="flex flex-col cursor-pointer duration-100">
       <h2 class="font-medium text-xl">{title}</h2>
       <p class="left-0 dark:text-gray-300 text-gray-700 text-base">Foco rojo</p>
     </summary>
-    <div class="overflow-hidden mt-4 flex flex-col max-h-0 transition-all duration-500 ease-in-out group-open:max-h-96">
-      <label for="datatime" class="font-bold mt-3 ">Creado: Ticket - {numberTicket}</label>
-      <p class="ml-4">11/07/2024 17:23</p>
-      <label for="datatime" class="font-bold mt-3 ">Finalizada</label>
-      <input class="dark:bg-gray-800 bg-gray-50 h-12 w-11/12 mx-auto" type="datetime-local" id="datetime" name="datetime" />
-      <label for="options" class="font-bold mt-3 ">Estado</label>
-      <select class="dark:bg-gray-800 bg-gray-50 h-12 w-11/12 mx-auto" name="opciones" id="opciones">
+    <div
+      class="overflow-hidden mt-4 flex flex-col max-h-0 transition-all duration-500 ease-in-out group-open:max-h-96"
+    >
+      <label for="datatime" class="font-bold mt-3 mx-auto"
+        >Ticket - {numberTicket} <span class="text-cyan-500">|</span> 15/7/2025 <span class="text-cyan-500">|</span>
+        15:38</label
+      >
+      <label for="datatime" class="font-bold mt-3">Orden iniciada</label>
+      <input
+        class="dark:bg-gray-800 bg-gray-50 h-12 w-11/12 mx-auto"
+        type="datetime-local"
+        id="datetime"
+        name="datetime"
+      />
+      <label for="datatime" class="font-bold mt-3">Orden finalizada</label>
+      <input
+        class="dark:bg-gray-800 bg-gray-50 h-12 w-11/12 mx-auto"
+        type="datetime-local"
+        id="datetime"
+        name="datetime"
+      />
+      <label for="options" class="font-bold mt-3">Estado</label>
+      <select
+        class="dark:bg-gray-800 bg-gray-50 h-12 w-11/12 mx-auto"
+        name="opciones"
+        id="opciones"
+      >
         <option value="creado">Escoge una opción</option>
         <option value="creado">Creado</option>
         <option value="entregado">Entregado</option>
@@ -35,3 +65,10 @@ const {title, numberTicket, additionalInformation='No hay novedades'} = Astro.pr
   </details>
 </div>
 
+<style>
+  .orderCard {
+    /* box-shadow: 0px 0px 3px; */
+    /* background-color: #0f2735; */
+    /* background-color: red; */
+  }
+</style>
