@@ -1,8 +1,16 @@
+---
+interface Props {
+  title: string;
+  sector: string;
+}
+
+const {title, sector} = Astro.props
+---
 <div
-  class="border h-32 my-16 rounded-2xl lg:w-96 w-11/12 mx-auto border-gray-400"
+  class="border min-h-32 my-16 rounded-2xl lg:w-96 w-11/12 mx-auto border-gray-400"
 >
   <div class="mt-5 text-center">
-    <h2 class="text-xl">001428 Byron Vladimir Tito Sandoval</h2>
+    <h2 class="text-xl">{title}</h2>
   </div>
 
   <div class="mt-2">
@@ -99,7 +107,7 @@
         </svg>
       </div>
       <div class="border rounded-lg p-1 border-black h-10 w-10 grid items-center justify-center dark:bg-blue-950">
-        <p class="">SJ</p>
+        <p class="">{sector}</p>
       </div>
     </div>
   </div>

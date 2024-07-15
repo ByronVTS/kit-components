@@ -1,8 +1,15 @@
-  <div
+---
+interface Props {
+  title: string;
+}
+const {title} = Astro.props
+---
+
+<div
     class="bordecito border rounded-2xl border-l-blue-800 p-1 lg:w-96 w-11/12 mx-auto my-16 h-auto grid-flow-col grid duration-300"
   >
     <div class="grid items-center justify-center">
-      <h2 class="text-lg">001428 Byron Vladimir Tito </h2>
+      <h2 class="text-lg">{title} </h2>
     </div>
     <div class=" grid justify-end items-center">
       <svg

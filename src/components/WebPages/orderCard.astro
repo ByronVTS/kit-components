@@ -1,17 +1,25 @@
-<div id="orderCard" class="orderCard space-y-4 w-97 mx-auto rounded-2xl my-4 shadow-lg dark:shadow-gray-600">
+---
+interface Props{
+  title: string;
+  numberTicket: number;
+  additionalInformation?:string;
+}
+const {title, numberTicket, additionalInformation='No hay novedades'} = Astro.props
+---
+<div id="orderCard" class="orderCard space-y-4 w-97 mx-auto rounded-2xl my-4  border z-50 dark:shadow-gray-600">
   <details class="group border-s-8 border-red-500 rounded-2xl duration-1000 pl-2 py-4 [&_summary::-webkit-details-marker]:hidden">
     <summary class="flex flex-col cursor-pointer duration-100">
-      <h2 class="font-medium text-xl">001428 Byron Vladimir Tito Sandoval</h2>
+      <h2 class="font-medium text-xl">{title}</h2>
       <p class="left-0 dark:text-gray-300 text-gray-700 text-base">Foco rojo</p>
     </summary>
     <div class="overflow-hidden mt-4 flex flex-col max-h-0 transition-all duration-500 ease-in-out group-open:max-h-96">
-      <p>TKS - 3648</p>
-      <label for="datatime" class="font-bold mt-3 ml-2">Creado</label>
-      <p>11/07/2024 17:23</p>
-      <label for="datatime" class="font-bold mt-3 ml-2">Finalizada</label>
-      <input class="bg-black h-12 mt-2 w-full" type="datetime-local" id="datetime" name="datetime" />
-      <label for="options" class="font-bold mt-3 ml-2">Estado</label>
-      <select class="bg-black h-12 mt-2" name="opciones" id="opciones" onchange="changeBorderColor()">
+      <label for="datatime" class="font-bold mt-3 ">Creado: Ticket - {numberTicket}</label>
+      <p class="ml-4">11/07/2024 17:23</p>
+      <label for="datatime" class="font-bold mt-3 ">Finalizada</label>
+      <input class="dark:bg-gray-800 bg-gray-50 h-12 w-11/12 mx-auto" type="datetime-local" id="datetime" name="datetime" />
+      <label for="options" class="font-bold mt-3 ">Estado</label>
+      <select class="dark:bg-gray-800 bg-gray-50 h-12 w-11/12 mx-auto" name="opciones" id="opciones">
+        <option value="creado">Escoge una opción</option>
         <option value="creado">Creado</option>
         <option value="entregado">Entregado</option>
         <option value="enproceso">En proceso</option>
@@ -19,10 +27,9 @@
         <option value="reagendada">Reagendada</option>
         <option value="cancelada">Cancelada</option>
       </select>
-      <p class="font-bold mt-3 ml-2">Informacion adicional</p>
-      <p>
-        Cliente dice que no va a estar en su domicilio pero que afuera de su
-        casa hay varios cables rotos despues que paso un camion
+      <p class="font-bold mt-3">Informacion adicional</p>
+      <p class="ml-4">
+        {additionalInformation}
       </p>
     </div>
   </details>

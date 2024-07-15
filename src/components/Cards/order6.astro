@@ -1,9 +1,16 @@
+---
+interface Props{
+  title: string;
+  numberTicket: number;
+}
+const {title, numberTicket} = Astro.props
+---
 <div
-  class="flex justify-evenly items-center border-8 border-blue-600 h-24 my-16 rounded-2xl lg:w-96 w-11/12 mx-auto"
+  class="flex justify-evenly items-center border-8 px-3 border-blue-600 h-24 my-16 rounded-2xl lg:w-96 w-11/12 mx-auto"
 >
   <div>
-    <h2 class="text-lg">001248 Byron Vladimir Tito</h2>
-    <p class="text-gray-400">TKS - 91919</p>
+    <h2 class="text-lg">{title}</h2>
+    <p class="text-gray-400">TKS - {numberTicket}</p>
   </div>
   <div class="h-10">
     <svg
