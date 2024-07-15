@@ -1,12 +1,62 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import WebPagesLayout from "../../layouts/WebPagesLayout.astro";
 import OrderCard from "../../components/WebPages/orderCard.astro";
+import CounterOrders from "../../components/WebPages/counterOrders.astro";
 ---
 
-<Layout title="Kit Components | WebPages">
-    <h1 class="text-2xl lg:text-6xl text-center mb-5 ">Control de ordenes diarias con CARDS</h1>
-    <OrderCard title="003966 CADENA EDWIN REMIGIO" numberTicket={5678} additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos "/>
-    <OrderCard title="003966 CADENA EDWIN REMIGIO" numberTicket={5678} additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos "/>
-    <OrderCard title="003966 CADENA EDWIN REMIGIO" numberTicket={5678} additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"/>
-    <OrderCard title="003966 CADENA EDWIN REMIGIO" numberTicket={5678} additionalInformation="No hay novedades"/>
-</Layout>
+<WebPagesLayout title="Kit Components | WebPages">
+  <h1 class="text-2xl lg:text-6xl text-center mb-5">
+    Control de ordenes diarias con CARDS
+  </h1>
+  <OrderCard
+    title="003966 CADENA EDWIN REMIGIO"
+    numberTicket={5678}
+    additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos "
+  />
+  <OrderCard
+    title="003966 CADENA EDWIN REMIGIO"
+    numberTicket={5678}
+    additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos "
+  />
+  <OrderCard
+    title="003966 CADENA EDWIN REMIGIO"
+    numberTicket={5678}
+    additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+  />
+  <OrderCard
+    title="003966 CADENA EDWIN REMIGIO"
+    numberTicket={5678}
+    additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+  />
+  <OrderCard
+    title="003966 CADENA EDWIN REMIGIO"
+    numberTicket={5678}
+    additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+  />
+  <OrderCard
+    title="003966 CADENA EDWIN REMIGIO"
+    numberTicket={5678}
+    additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+  />
+  <OrderCard
+    title="003966 CADENA EDWIN REMIGIO"
+    numberTicket={5678}
+    additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+  />
+  <OrderCard
+    title="003966 CADENA EDWIN REMIGIO"
+    numberTicket={5678}
+    additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+  />
+  <OrderCard
+    title="003966 CADENA EDWIN REMIGIO"
+    numberTicket={5678}
+    additionalInformation="No hay novedades"
+  />
+  <OrderCard
+    title="003966 CADENA EDWIN REMIGIO"
+    numberTicket={5678}
+    additionalInformation="No hay novedades"
+  />
+  <CounterOrders />
+</WebPagesLayout>
