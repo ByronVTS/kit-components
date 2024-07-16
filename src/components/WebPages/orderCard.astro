@@ -12,8 +12,7 @@ const {
 ---
 
 <div
-  id="orderCard"
-  class="orderCard space-y-4 w-97 dark:bg-darkCard bg-white mx-auto rounded-2xl my-4 z-50"
+  class="space-y-4 w-97 dark:bg-darkCard bg-white h-auto mx-auto rounded-2xl my-4 z-50"
 >
   <details
     class="group border-s-8 border-red-500 rounded-2xl duration-1000 pl-2 py-4 [&_summary::-webkit-details-marker]:hidden"
@@ -23,11 +22,13 @@ const {
       <p class="left-0 dark:text-gray-300 text-gray-700 text-base">Foco rojo</p>
     </summary>
     <div
-      class="overflow-hidden mt-4 flex flex-col max-h-0 transition-all duration-500 ease-in-out group-open:max-h-96"
+      class="overflow-hidden mt-4 flex bg-transparent flex-col transition-all duration-500 ease-in-out group-open:max-h-auto"
     >
       <label for="datatime" class="font-bold mt-3 mx-auto"
-        >Ticket - {numberTicket} <span class="text-cyan-500">|</span> 15/7/2025 <span class="text-cyan-500">|</span>
-        15:38</label
+        >Ticket - {numberTicket}
+        <span class="text-cyan-500">|</span> 15/7/2025 <span
+          class="text-cyan-500">|</span
+        > 15:38</label
       >
       <label for="datatime" class="font-bold mt-3">Orden iniciada</label>
       <input
@@ -58,17 +59,7 @@ const {
         <option value="cancelada">Cancelada</option>
       </select>
       <p class="font-bold mt-3">Informacion adicional</p>
-      <p class="ml-4">
-        {additionalInformation}
-      </p>
+      <p class="ml-4">{additionalInformation}</p>
     </div>
   </details>
 </div>
-
-<style>
-  .orderCard {
-    /* box-shadow: 0px 0px 3px; */
-    /* background-color: #0f2735; */
-    /* background-color: red; */
-  }
-</style>
