@@ -5,54 +5,33 @@ interface Props {
   additionalInformation?: string;
   colorStatus: string;
 }
+
+// Desestructuración de las props con valores predeterminados
 const {
   title,
   numberTicket,
   additionalInformation = "No hay novedades",
-  colorStatus,
+  colorStatus = "red",
 } = Astro.props;
 ---
 
-
-<div
-  class="space-y-4 w-97 dark:bg-darkCard bg-white h-auto mx-auto rounded-2xl my-4 z-50"
->
-  <details
-    class={`group border-s-8 border-${colorStatus}-500  rounded-2xl duration-1000 pl-2 py-4 [&_summary::-webkit-details-marker]:hidden`}
-  >
+<div class="space-y-4 w-97 dark:bg-darkCard bg-white h-auto mx-auto rounded-2xl my-4 z-50">
+  <details class={`group border-s-8 border-${colorStatus}-500 rounded-2xl duration-1000 pl-2 py-4 [&_summary::-webkit-details-marker]:hidden`}>
     <summary class="flex flex-col cursor-pointer duration-100">
-      <h2 class="font-medium text-xl">{title}</h2>
+      <h2 class="font-medium text-lg">{title}</h2>
       <p class="left-0 dark:text-gray-300 text-gray-700 text-base">Foco rojo</p>
     </summary>
-    <div
-      class="overflow-hidden mt-4 flex bg-transparent flex-col transition-all duration-500 ease-in-out group-open:max-h-auto"
-    >
-      <label for="datatime" class="font-bold mt-3 mx-auto"
-        >Ticket - {numberTicket}
-        <span class="text-cyan-500">|</span> 15/7/2025 <span
-          class="text-cyan-500">|</span
-        > 15:38</label
-      >
-      <label for="datatime" class="font-bold mt-3">Orden iniciada</label>
-      <input
-        class="dark:bg-gray-900 bg-gray-50 h-12 w-11/12 mx-auto"
-        type="datetime-local"
-        id="datetime"
-        name="datetime"
-      />
-      <label for="datatime" class="font-bold mt-3">Orden finalizada</label>
-      <input
-        class="dark:bg-gray-900 bg-gray-50 h-12 w-11/12 mx-auto"
-        type="datetime-local"
-        id="datetime"
-        name="datetime"
-      />
+    <div class="overflow-hidden mt-4 flex bg-transparent flex-col transition-all duration-500 ease-in-out group-open:max-h-auto">
+      <label for="datetime" class="font-bold mt-3 mx-auto">
+        Ticket - {numberTicket}
+        <span class="text-cyan-500">|</span> 15/7/2025 <span class="text-cyan-500">|</span> 15:38
+      </label>
+      <label for="datetime" class="font-bold mt-3">Orden iniciada</label>
+      <input class="dark:bg-gray-900 bg-gray-50 h-12 w-11/12 mx-auto" type="datetime-local" id="datetime" name="datetime" />
+      <label for="datetime" class="font-bold mt-3">Orden finalizada</label>
+      <input class="dark:bg-gray-900 bg-gray-50 h-12 w-11/12 mx-auto" type="datetime-local" id="datetime" name="datetime" />
       <label for="options" class="font-bold mt-3">Estado</label>
-      <select
-        class="dark:bg-gray-900 bg-gray-50 h-12 w-11/12 mx-auto"
-        name="opciones"
-        id="opciones"
-      >
+      <select class="dark:bg-gray-900 bg-gray-50 h-12 w-11/12 mx-auto" name="opciones" id="opciones">
         <option value="creado">Escoge una opción</option>
         <option value="creado">Creado</option>
         <option value="entregado">Entregado</option>
@@ -66,3 +45,10 @@ const {
     </div>
   </details>
 </div>
+
+<span class="border-green-500"></span>
+<span class="border-blue-500"></span>
+<span class="border-orange-500"></span>
+<span class="border-violet-500"></span>
+<span class="border-gray-500"></span>
+<span class="border-red-500"></span>
