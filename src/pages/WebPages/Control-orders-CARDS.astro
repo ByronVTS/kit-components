@@ -1,0 +1,134 @@
+---
+import WebPagesLayout from "../../layouts/WebPagesLayout.astro";
+import OrderCard from "../../components/WebPages/orderCard.astro";
+import CounterOrders from "../../components/WebPages/counterOrders.astro";
+---
+
+<WebPagesLayout
+  title="Control orders with CARDS"
+  namePage="Control orders with CARDS"
+>
+  <div class="lg:grid lg:grid-cols-3 gap-10">
+    <div>
+      <OrderCard
+      colorStatus="red"
+      title="003983 RODRIGUEZ ARCILA DAY MAR"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque lectus nec nisl sollicitudin, ac sagittis magna aliquam. Phasellus at orci ut sapien tristique ultrices non id metus. Morbi eu sem et odio bibendum tincidunt sed a orci. Nulla facilisi. Vivamus nec nisi id urna dictum cursus. Nam congue mauris eget nunc facilisis, sit amet egestas magna mollis. Duis fermentum, odio a tincidunt scelerisque, ligula tortor volutpat libero, nec fermentum augue quam sit amet purus.Curabitur ultricies, nisl nec fermentum tincidunt, nunc leo dapibus ligula, non eleifend nulla lorem a quam. Integer sed magna ut magna sollicitudin venenatis. Nullam vehicula vestibulum turpis a gravida. Etiam vestibulum auctor risus, et elementum eros vehicula sed. Integer non nulla vel dolor fermentum ullamcorper. Phasellus interdum nibh non nisi elementum, nec dignissim eros scelerisque. Quisque nec eros non urna sollicitudin pretium. Praesent bibendum feugiat nunc, a volutpat odio iaculis eget. Fusce ut quam ut nulla venenatis bibendum ac a arcu.Suspendisse potenti. Fusce nec purus eget dolor iaculis sodales. Sed ut metus et neque malesuada cursus. Nam quis risus vel odio posuere tincidunt. Integer viverra lacus ut orci tempor, a eleifend odio porttitor. Nullam dictum leo sit amet leo efficitur, quis euismod purus ultricies. Proin quis justo vitae libero ullamcorper feugiat. Aenean venenatis neque a nibh aliquet, et volutpat orci vulputate. Vestibulum at nibh ac erat laoreet ullamcorper.Maur"
+    />
+    <OrderCard
+    colorStatus="orange"
+      title="003966 CADENA EDWIN REMIGIO"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos "
+    />
+    <OrderCard
+    colorStatus="blue"
+      title="003981 CONTRERAS PINELA JOSE EDUARDO"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+      <OrderCard
+      colorStatus="red"
+      title="003983 RODRIGUEZ ARCILA DAY MAR"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque lectus nec nisl sollicitudin, ac sagittis magna aliquam. Phasellus at orci ut sapien tristique ultrices non id metus. Morbi eu sem et odio bibendum tincidunt sed a orci. Nulla facilisi. Vivamus nec nisi id urna dictum cursus. Nam congue mauris eget nunc facilisis, sit amet egestas magna mollis. Duis fermentum, odio a tincidunt scelerisque, ligula tortor volutpat libero, nec fermentum augue quam sit amet purus.Curabitur ultricies, nisl nec fermentum tincidunt, nunc leo dapibus ligula, non eleifend nulla lorem a quam. Integer sed magna ut magna sollicitudin venenatis. Nullam vehicula vestibulum turpis a gravida. Etiam vestibulum auctor risus, et elementum eros vehicula sed. Integer non nulla vel dolor fermentum ullamcorper. Phasellus interdum nibh non nisi elementum, nec dignissim eros scelerisque. Quisque nec eros non urna sollicitudin pretium. Praesent bibendum feugiat nunc, a volutpat odio iaculis eget. Fusce ut quam ut nulla venenatis bibendum ac a arcu.Suspendisse potenti. Fusce nec purus eget dolor iaculis sodales. Sed ut metus et neque malesuada cursus. Nam quis risus vel odio posuere tincidunt. Integer viverra lacus ut orci tempor, a eleifend odio porttitor. Nullam dictum leo sit amet leo efficitur, quis euismod purus ultricies. Proin quis justo vitae libero ullamcorper feugiat. Aenean venenatis neque a nibh aliquet, et volutpat orci vulputate. Vestibulum at nibh ac erat laoreet ullamcorper.Maur"
+    />
+    <OrderCard
+    colorStatus="orange"
+      title="003966 CADENA EDWIN REMIGIO"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos "
+    />
+    <OrderCard
+    colorStatus="blue"
+      title="003981 CONTRERAS PINELA JOSE EDUARDO"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+    </div>
+    
+    <div>
+      <OrderCard
+      colorStatus="gray"
+      title="003980 LARA LEMA CARLOS MARCELO"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+    <OrderCard
+    colorStatus="violet"
+      title="003986 CARCELEN TORRES ALEXANDRA MARITZA"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+    <OrderCard
+    colorStatus="red"
+      title="003986 CARCELEN TORRES ALEXANDRA MARITZA"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+      <OrderCard
+      colorStatus="gray"
+      title="003980 LARA LEMA CARLOS MARCELO"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+    <OrderCard
+    colorStatus="violet"
+      title="003986 CARCELEN TORRES ALEXANDRA MARITZA"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+    <OrderCard
+    colorStatus="red"
+      title="003986 CARCELEN TORRES ALEXANDRA MARITZA"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+    </div>
+    
+    <div>
+      <OrderCard
+      colorStatus="green"
+      title="003988 VARGAS PEREZ MELL ESTEFANIA"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+    <OrderCard
+    colorStatus="green"
+      title="	003985 TORRES TORRES JANNETH ALEXANDRA"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+    <OrderCard
+    colorStatus="green"
+      title="003966 CADENA EDWIN REMIGIO"
+      numberTicket={5678}
+      additionalInformation="No hay novedades"
+    />
+      <OrderCard
+      colorStatus="green"
+      title="003988 VARGAS PEREZ MELL ESTEFANIA"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+    <OrderCard
+    colorStatus="green"
+      title="	003985 TORRES TORRES JANNETH ALEXANDRA"
+      numberTicket={5678}
+      additionalInformation="Cliente indica que tiene los equipos en la otra casa primero confirmar que si tenga todos los equipos no instalar hasta que se confirma todos los materiales"
+    />
+    <OrderCard
+    colorStatus="green"
+      title="003966 CADENA EDWIN REMIGIO"
+      numberTicket={5678}
+      additionalInformation="No hay novedades"
+    />
+    </div>
+    
+   
+    
+  </div>
+
+  <CounterOrders />
+</WebPagesLayout>
