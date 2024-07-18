@@ -3,19 +3,22 @@ interface Props {
   title: string;
   numberTicket: number;
   additionalInformation?: string;
+  colorStatus: string;
 }
 const {
   title,
   numberTicket,
   additionalInformation = "No hay novedades",
+  colorStatus,
 } = Astro.props;
 ---
+
 
 <div
   class="space-y-4 w-97 dark:bg-darkCard bg-white h-auto mx-auto rounded-2xl my-4 z-50"
 >
   <details
-    class="group border-s-8 border-red-500 rounded-2xl duration-1000 pl-2 py-4 [&_summary::-webkit-details-marker]:hidden"
+    class={`group border-s-8 border-${colorStatus}-500  rounded-2xl duration-1000 pl-2 py-4 [&_summary::-webkit-details-marker]:hidden`}
   >
     <summary class="flex flex-col cursor-pointer duration-100">
       <h2 class="font-medium text-xl">{title}</h2>
