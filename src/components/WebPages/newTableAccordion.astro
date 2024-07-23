@@ -1,0 +1,73 @@
+---
+interface Props {
+  title: string;
+  typeOrder: string;
+  colorStatus: string;
+}
+
+const { title, typeOrder, colorStatus } = Astro.props;
+---
+
+<div class={`border-b-4 border-${colorStatus}-600`}>
+  <details class="group py-4 [&_summary::-webkit-details-marker]:hidden">
+    <summary
+      class="flex cursor-pointer items-center justify-between dark:text-gray-100 ml-1"
+    >
+      <div class="flex flex-col">
+        <h2 class="text-lg">{title}</h2>
+        <h3 class="text-gray-500">{typeOrder}</h3>
+      </div>
+
+      <span class="relative size-5 shrink-0 mx-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute inset-0 size-5 opacity-100 group-open:opacity-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute inset-0 size-5 opacity-0 group-open:opacity-100"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </span>
+    </summary>
+
+    <div class="mt- mx-1 flex flex-col ">
+        <div class="text-center mt-3">Ticket - 74693 <span class="text-cyan-700 ">|</span> 23/7/2024 <span class="text-cyan-700 ">|</span> 11:19 PM</div>
+        <label for="datetime" class="font-bold mt-3">Orden iniciado</label>
+        <input type="datetime-local" class="bg-gray-400 dark:bg-gray-700 p-2 rounded-md">
+        <label for="datetime" class="font-bold mt-3">Orden finalizada</label>
+        <input type="datetime-local" class="bg-gray-400 dark:bg-gray-700 p-2 rounded-md">
+        <label for="options" class="font-bold mt-3">Estado</label>
+        <select name="opciones" id="opciones" class="bg-gray-400 dark:bg-gray-700 p-2 rounded-md">
+            <option value="">Escoge una opción</option>
+            <option value="creado">Creado</option>
+            <option value="entregado">Entregado</option>
+            <option value="enproceso">En proceso</option>
+            <option value="pausado">Pausado</option>
+            <option value="reagendado">Reagendado</option>
+            <option value="cancelado">Cancelada</option>
+        </select>
+        <p class="mt-3 font-bold">Informacion adicional</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga at corporis exercitationem aliquam vel perspiciatis soluta corrupti assumenda tempore adipisci impedit error dignissimos earum, mollitia, culpa pariatur voluptate. Quia, perspiciatis.</p>
+    </div>
+  </details>
+</div>
