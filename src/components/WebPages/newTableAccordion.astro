@@ -8,13 +8,13 @@ interface Props {
 const { title, typeOrder, colorStatus } = Astro.props;
 ---
 
-<div class={`border-b-4 rounded-xl border-${colorStatus}-600  overflow-hidden mt-3` }>
-  <details class={`group py-4 [&_summary::-webkit-details-marker]:hidden open:bg-gray-300  dark:open:bg-gray-800 `}>
+<div class={`border-b-4 rounded-xl border-${colorStatus}-600  overflow-hidden mt-3 border` }>
+  <details class={`group py-4 [&_summary::-webkit-details-marker]:hidden   dark:open:bg-gray-800 `}>
     <summary
       class="flex cursor-pointer items-center justify-between dark:text-gray-100 ml-1"
     >
       <div class="flex flex-col">
-        <h2 class="text-lg">{title}</h2>
+        <h2 class="">{title}</h2>
         <h3 class="text-gray-500">{typeOrder}</h3>
       </div>
 

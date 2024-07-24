@@ -1,0 +1,68 @@
+---
+import WebPagesLayout from "../../layouts/WebPagesLayout.astro";
+import NewTableAccordion from "../../components/WebPages/newTableAccordion.astro";
+---
+
+<WebPagesLayout
+  title="Order Control with CARDS 2"
+>
+  <section class="grid lg:grid-cols-3 lg:gap-3 mx-1">
+    <div>
+      <NewTableAccordion
+        title="001428 Byron Vladimir Tito Sandoval"
+        typeOrder="Foco rojo"
+        colorStatus="red"
+      />
+      <NewTableAccordion
+        title="003986 CARCELEN TORRES ALEXANDRA MARITZA"
+        typeOrder="Instalación"
+        colorStatus="blue"
+      />
+      <NewTableAccordion
+        title="003987 IBAÑEZ BARRIOS NIDIA ESTHER"
+        typeOrder="Cables caídos"
+        colorStatus="gray"
+      />
+    </div>
+    <div>
+      <NewTableAccordion
+        title="003991 CABEZAS NEPAS LUIS DANIEL"
+        typeOrder="Traslado"
+        colorStatus="green"
+      />
+      <NewTableAccordion
+        title="003992 BARRE JARAMILLO MADELINE JULIANA"
+        typeOrder="Reubicacion ONT"
+        colorStatus="red"
+      />
+      <NewTableAccordion
+        title="003985 TORRES TORRES JANNETH ALEXANDRA"
+        typeOrder="Cambio de router"
+        colorStatus="violet"
+      />
+    </div>
+    <div>
+      <NewTableAccordion
+        title="003933 CALUÑA GUAQUIPANA JACQUELINE REBECA"
+        typeOrder="Intermitencia wifi"
+        colorStatus="green"
+      />
+      <NewTableAccordion
+        title="003933 CALUÑA GUAQUIPANA JACQUELINE REBECA"
+        typeOrder="Intermitencia wifi"
+        colorStatus="gray"
+      />
+      <NewTableAccordion
+        title="003982 TRUJILLO PEDROZO DIANA PAOLA"
+        typeOrder="Inspección"
+        colorStatus="green"
+      />
+    </div>
+  </section>
+</WebPagesLayout>
+
+<div class="border-red-600"></div>
+<div class="border-blue-600"></div>
+<div class="border-gray-600"></div>
+<div class="border-green-600"></div>
+<div class="border-violet-600"></div>
