@@ -1,0 +1,51 @@
+---
+import WebPagesLayout from "../../layouts/WebPagesLayout.astro";
+import TrTable from "../../components/WebPages/trTable.astro";
+---
+<WebPagesLayout title="Order Control within the Table">
+
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-white uppercase bg-blue-950   sticky top-0">
+            <tr class="  ">
+                <th scope="col" class="px-6 py-3">
+                    OT
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Trabajo
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Estado
+                </th>
+                <th scope="col" class="px-3 py-3">
+                    Ticket
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Fecha inicio
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Fecha fin
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+          
+            <TrTable ot="001428 Byron Vladimir Tito Sandoval" trabajo="Instalación"/>
+            <TrTable ot="001428 Byron Vladimir Tito Sandoval" trabajo="Instalación"/>
+            <TrTable ot="003986 CARCELEN TORRES ALEXANDRA MARITZA" trabajo="Instalación"/>
+            <TrTable ot="003986 CARCELEN TORRES ALEXANDRA MARITZA" trabajo="Instalación"/>
+            <TrTable ot="003996 GUERRERO PARRAGA INGRID JAHAIRA" trabajo="Instalación"/>
+            <TrTable ot="003996 GUERRERO PARRAGA INGRID JAHAIRA" trabajo="Instalación"/>
+            <TrTable ot="003985 TORRES TORRES JANNETH ALEXANDRA" trabajo="Instalación"/>
+            <TrTable ot="003985 TORRES TORRES JANNETH ALEXANDRA" trabajo="Instalación"/>
+            <TrTable ot="003985 TORRES TORRES JANNETH ALEXANDRA" trabajo="Instalación"/>
+            <TrTable ot="003985 TORRES TORRES JANNETH ALEXANDRA" trabajo="Instalación"/>
+            <TrTable ot="003985 TORRES TORRES JANNETH ALEXANDRA" trabajo="Instalación"/>
+            <TrTable ot="003985 TORRES TORRES JANNETH ALEXANDRA" trabajo="Instalación"/>
+            <TrTable ot="003985 TORRES TORRES JANNETH ALEXANDRA" trabajo="Instalación"/>
+            <TrTable ot="003985 TORRES TORRES JANNETH ALEXANDRA" trabajo="Instalación"/>
+        </tbody>
+    </table>
+</div>
+</WebPagesLayout>

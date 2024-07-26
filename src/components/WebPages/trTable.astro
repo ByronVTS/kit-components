@@ -1,0 +1,39 @@
+---
+interface Props {
+    ot:string;
+    trabajo:string;
+}
+const {ot, trabajo} = Astro.props
+---
+
+<tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-200 even:dark:bg-gray-800 border-b dark:border-gray-700 hover:bg-gray-300 dark:hover:bg-gray-950 ">
+    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+        {ot}
+    </th>
+    <td class="px-6 py-4">
+        {trabajo}
+    </td>
+    <td class="px-6 py-4">
+        <select class="dark:bg-gray-600 bg-gray-300 rounded-md  border border-slate-500 h-8  " name="opciones" id="opciones">
+            <option value="creado">Escoge una opción</option>
+            <option value="creado">Creado</option>
+            <option value="entregado">Entregado</option>
+            <option value="enproceso">En proceso</option>
+            <option value="pausada">Pausada</option>
+            <option value="reagendada">Reagendada</option>
+            <option value="cancelada">Cancelada</option>
+          </select>
+    </td>
+    <td class="px-2 py-4">
+        
+       4532 <span class="text-cyan-500">|</span> 15/7/2025 <span class="text-cyan-500">|</span> 15:38
+
+    </td>
+    <td class="px-6 py-4">
+        <input class="dark:bg-gray-600 bg-gray-300 rounded-md h-8 pl-1   mx-auto" type="datetime-local" id="datetime" name="datetime" />
+
+    </td>
+    <td class="px-6 py-4">
+        <input class="dark:bg-gray-600 bg-gray-300 rounded-md h-8 pl-1" type="datetime-local" id="datetime" name="datetime" />
+    </td>
+</tr>
